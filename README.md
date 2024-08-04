@@ -6,4 +6,5 @@ https://youtu.be/8f4CrHqlY0A
 
 [Appointment Capstone](AppointmentCapstone)
 
-Appointment Capstone
+[Link to Appointment Capstone](Projects/AppointmentCapstone)
+
