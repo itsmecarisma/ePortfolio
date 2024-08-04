@@ -6,5 +6,5 @@ https://youtu.be/8f4CrHqlY0A
 
 [Appointment Capstone](AppointmentCapstone)
 
-[Link to Appointment Capstone](ePortfolio/AppointmentCapstone)
+https://github.com/itsmecarisma/ePortfolio/tree/main/Appointment%20Capstone
 
