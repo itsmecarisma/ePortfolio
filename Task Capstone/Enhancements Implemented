@@ -1,0 +1,34 @@
+Enhancements Implemented
+1.	Implement a Custom Linked List for Task Storage:
+o	The TaskLinkedList class manages a dynamic list of tasks, allowing efficient insertion and deletion operations.
+2.	Implement Binary Search for Efficient Searching:
+o	The TaskBinarySearch class uses binary search to efficiently find tasks by their ID, given that the tasks are sorted.
+3.	Implement Sorting Algorithm:
+o	The TaskSorter class implements the merge sort algorithm to sort tasks by their names, ensuring efficient and stable sorting.
+4.	Use a Priority Queue for Task Management:
+o	The TaskPriorityQueue class manages tasks based on their priority (task ID), ensuring that tasks with the highest priority are processed first.
+
+How to Compile the Task Management System Code
+To compile the Task management system code without running the application, follow these detailed steps:
+Prerequisites:
+•	Ensure that the Java Development Kit (JDK) is installed on your system.
+•	Set up your environment variables to include JAVA_HOME and add JAVA_HOME/bin to your system's PATH.
+Step-by-Step Instructions:
+1.	Set Up Directory Structure:
+o	Open a terminal or command prompt.
+o	Navigate to the directory where you want to create the project.
+o	Create the main directory and navigate into it.
+Create Java Files and Add code:
+2.	Inside the taskservice directory, create the following Java files:
+o	Task.java
+o	TaskLinkedList.java
+o	TaskBinarySearch.java
+o	TaskSorter.java
+o	TaskPriorityQueue.java
+o	TaskServiceCapStone.java
+o	Main.java
+
+3.	Code is added to all Java files.
+4.	Compile the code.
+o	Ensure you are in the taskservice directory:
+o	Compile all Java files:
