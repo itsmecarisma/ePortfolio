@@ -1,0 +1,20 @@
+The artifact:
+The artifact is a task management system written in Java, that is designed to efficiently handle tasks with operations such as adding, deleting, finding, and sorting tasks. I created this code in October 2023 in my CS 320: Software Testing, Automation, and Quality Assurance course. 
+This system uses various advanced data structures and algorithms to enhance its functionality. It incorporates a custom linked list for managing the collection of tasks, a priority queue for prioritizing tasks, a binary search for efficient task retrieval by ID, and a merge sort for sorting tasks by name. 
+These enhancements aim to optimize the performance and scalability of the system, demonstrating a thorough application of fundamental computer science concepts. The Task management system serves as a practical example of implementing and integrating advanced algorithms and data structures to create an efficient and vigorous software solution.
+
+Inclusion of the Artifact:
+I selected the Task management system for inclusion in my ePortfolio because it effectively showcases my skills and abilities in implementing and optimizing algorithms and data structures, which are fundamental aspects of computer science and software engineering.
+The specific components that highlight my proficiency include the custom linked list, which demonstrates my understanding of dynamic data structures and their practical applications, and the priority queue, which emphasizes my ability to manage tasks efficiently based on priority. 
+The implementation of binary search and merge sort algorithms showcases my ability to enhance performance through efficient searching and sorting techniques. The artifact was improved by integrating these advanced data structures and algorithms, significantly optimizing task management operations in speed and efficiency. 
+These enhancements illustrate my technical skills, problem-solving capacity, and commitment to developing robust, scalable solutions, making this artifact a strong representation of my competencies and a valuable addition to my ePortfolio.
+
+Course Objective:
+Yes, the enhancements made to the Task management system in Module One have effectively met several course objectives. By integrating advanced data structures and algorithms, such as custom linked lists, priority queues, binary search, and merge sort, I demonstrated my ability to design and evaluate computing solutions that solve specific problems using algorithmic principles and computer science practices. 
+This aligns well to manage trade-offs involved in design choices related to data structures and algorithms. I will continue to focus on improving collaborative environments by incorporating feedback from diverse audiences and further refining my communication skills by creating more comprehensive documentation and visual aids. 
+Additionally, I plan to integrate security considerations into my designs to proactively ensure strong and secure computing solutions, addressing potential vulnerabilities.
+
+Reflection:
+Enhancing and modifying the Task management system was a valuable learning experience that deepened my understanding of advanced data structures and algorithms. As I created and improved the system, I learned the importance of selecting the right data structures for specific tasks to optimize performance, such as using linked lists for dynamic data management and priority queues for efficient task prioritization.
+Implementing binary search and merge sort algorithms reinforced my knowledge of algorithmic principles and their practical applications. One of the challenges I faced was ensuring that the integration of these enhancements maintained the overall coherence and efficiency of the system, which required careful planning and testing.
+Additionally, balancing the trade-offs between complexity and performance optimization was a critical aspect that taught me to make informed design choices. This process also highlighted the importance of clear and concise documentation to support the understanding and maintainability of the code.
