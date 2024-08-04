@@ -1,0 +1,50 @@
+Detailed Instructions on How to Use the Artifact
+By following these instructions and using the provided code, you can demonstrate the functionalities and enhancements of the Appointment Management System artifact effectively. The provided test data, consisting of 100 valid appointments and various edge cases, will showcase how appointments are managed, validated, and handled within the system.
+Prerequisites: Set up
+
+1. Java Development Kit (JDK): Ensure you have the JDK installed. 
+2. Environment Variables: Set up your environment variables to include `JAVA_HOME` and add `JAVA_HOME/bin` to your system's `PATH`.
+
+Step-by-Step Instructions
+
+1. Set Up Directory Structure:
+    - Open a terminal or command prompt.
+    - Navigate to the directory where you want to create your project using the `cd` command.
+    - Create the main directory and navigate into it:
+
+2. Create Java Files and Add Code.
+3. Compile the Code:
+
+    - Ensure you are in the `appointmentservice` directory by running:
+    - Compile all Java files 
+    - If the compilation is successful, it will return to the command prompt without errors.
+
+4. Run the Application:
+
+    - Run the `Main` method to see the output 
+    - The output will demonstrate the functionalities and handle various test cases, showing both valid and invalid scenarios.
+
+Explanation of Output:
+1.	Valid Appointments:
+o	Output:
+Appointment: ID=abcdef1234, date=2024-07-28, description=Valid description
+Appointment: ID=ghijkl5678, date=2024-07-29, description=Description for appointment 2
+...
+Appointment: ID=mnopqrstuv, date=2024-10-05, description=Description for appointment 100
+o	Explanation: 100 valid appointments are created with unique IDs, future dates, and valid descriptions.
+
+2.	Null Description:
+o	Output: Description must not be null. Please provide a valid description.
+o	Explanation: The system throws an error indicating that the description must not be null.
+
+3.	Long Description:
+o	Output: Description must not exceed 50 characters. Please shorten the description to fit within the character limit.
+o	Explanation: The system throws an error indicating that the description exceeds the 50-character limit.
+
+4.	Past Date:
+o	Output: Appointment date must be in the future. Please select a valid future date.
+o	Explanation: The system throws an error indicating that the appointment date must be in the future.
+
+5.	Invalid Date Format:
+o	Output: Unparseable date: "invalid-date"
+o	Explanation: The system catches the exception for an invalid date format and prints a user-friendly error message.
