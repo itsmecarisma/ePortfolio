@@ -1,7 +1,17 @@
 # ePortfolio
 
 Table of Content
-_______________________________________
+______________________________________
+
+- Professional Self-Assessment
+- Code Reviews
+- Appointment Capstone (Software Design and Enineering)
+- Task Capstone (Algorithms and Data Structure)
+- AnimalShelter Capstone (Databases)
+__________________________________________
+
+Professional Self-Assessment
+
 
 
 [Code Review](https://github.com/itsmecarisma/ePortfolio/releases/tag/main)
