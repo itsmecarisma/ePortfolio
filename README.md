@@ -1,7 +1,6 @@
 # ePortfolio
 
 Table of Content
-______________________________________
 
 - Professional Self-Assessment
 - Code Reviews
