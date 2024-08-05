@@ -26,7 +26,7 @@ Code Review
 
 Below are two links for my code reviews. One is a link directly to the Githubs Releases, the other to my YouTube page. My code view emphasizes clarity, maintainability, and efficiency. I believe in writing clean, well-documented code that is easy to understand and maintain by others. Additionally, I focus on optimizing performance to ensure that my solutions are both effective and scalable.
 
-[Code Review](https://github.com/itsmecarisma/ePortfolio/releases/tag/main)
+[Code Review](https://youtu.be/LmlQ2o6t7L8)
 
 [Task Code Review](https://youtu.be/8f4CrHqlY0A)
 
@@ -38,7 +38,7 @@ Appointment Capstone (Software Design and Enineering)
 
 [Appointment Capstone](https://github.com/itsmecarisma/ePortfolio/tree/main/Appointment%20Capstone)
 
-The appointment class code is designed to manage and organize scheduling logic efficiently, ensuring continuous handling of various appointment-related functionalities. This class captures essential details such as the date, time, and description of appointments, while providing methods to create, update, and retrieve appointment data. It leverages strong data structures to store and manage appointments, ensuring quick access and manipulation. The class includes validation logic to ensure that all appointments adhere to specified constraints, such as non-overlapping time slots and valid date formats. By integrating these features, the appointment class not only simplifies the scheduling process but also ensures data integrity and consistency, making it a vital component in any application requiring reliable appointment management.
+The Appointment class is designed to manage appointment details, including a unique identifier, appointment date, and description. The class includes fields for `appointmentid`, `appointmentdate`, and `description`, with constraints on their values to ensure validity. The ID is generated using UUID and limited to 10 characters, while the description is capped at 50 characters and cannot be null. The `appointmentdate` must be a future date, verified using the `isFutureDate` method which parses the date string and compares it with the current date. The constructor initializes the appointment with a given date and description, enforcing the constraints through setter methods. The `toString` method provides a readable representation of the appointment details. The main method includes functionality to generate and print 100 valid appointments and test various edge cases, such as null descriptions, overly long descriptions, past dates, and invalid date formats, demonstrating the class's robustness in handling input validation and error reporting.
 
 ___________________________________________________________________________________________________________________________________________
 
@@ -48,7 +48,13 @@ ________________________________________________________________________________
 
 [Task Capstone](https://github.com/itsmecarisma/ePortfolio/tree/main/Task%20Capstone)
 
+The Task class is designed to manage tasks efficiently, capturing essential attributes such as task ID, name, and description. The `Main` class demonstrates the functionality of the `TaskServiceCapStone` class, which manages a collection of Task objects. The code initializes the task service, generating and adding 100 tasks with unique IDs and descriptions. It includes methods to find a task by ID, retrieve all tasks sorted by name, identify the highest priority task, delete a task, and find the index of a task by its ID. This comprehensive set of functionalities ensures effective task management and manipulation, providing a various framework for handling task-related operations in various applications.
 
+___________________________________________________________________________________________________________________________________________
+
+AnimalShelter Capstone (Databases)
+
+![image](https://github.com/user-attachments/assets/0e49477b-c77d-492a-93f1-6fdeb5464495)
 
 
 
