@@ -20,25 +20,35 @@ One of the key strengths I have developed in this program is the ability to coll
 My proficiency in data structures and algorithms has been a cornerstone of my education. Through rigorous coursework and practical assignments, I have mastered the fundamentals of algorithm design, complexity analysis, and data management. An example of this is my work on a capstone project where I implemented an optimized search algorithm to enhance the performance of a database application. Outside of the classroom, I applied these skills in a volunteer project where I helped develop a scheduling system for a local recreational center. This experience not only solidified my understanding of theoretical concepts but also demonstrated my ability to apply these principles to real-world problems. Similarly, my exposure to software engineering principles and database management systems has equipped me with the skills needed to design, develop, and maintain strong software applications. For example, my work with MongoDB and MySQL during various projects has given me a strong foundation in database design and querying. 
 
 The artifacts included in my ePortfolio reflect the scope and depth of my computer science knowledge and capabilities. Each project has been carefully selected to demonstrate my technical expertise and my ability to integrate different technologies flawlessly. For instance, the appointment class showcases my ability to manage scheduling logic and data structures effectively. The task class highlights my skills in object-oriented programming and software design, demonstrating my capacity to develop modular and maintainable code. My work on the AnimalShelter project underscores my proficiency in database management and CRUD operations using MongoDB. Additionally, the scheduling system I developed for the recreational center demonstrates my ability to contribute to real-world projects outside the academic environment. By summarizing these artifacts, my portfolio provides a holistic view of my abilities and prepares me for the challenges of the professional world. It serves as a testament to my dedication to the field and my readiness to contribute meaningfully to any organization.
+____________________________________________________________________________________________________________________________________________
 
+Code Review
 
-
-
-
+Below are two links for my code reviews. One is a link directly to the Githubs Releases, the other to my YouTube page. My code view emphasizes clarity, maintainability, and efficiency. I believe in writing clean, well-documented code that is easy to understand and maintain by others. Additionally, I focus on optimizing performance to ensure that my solutions are both effective and scalable.
 
 [Code Review](https://github.com/itsmecarisma/ePortfolio/releases/tag/main)
 
 [Task Code Review](https://youtu.be/8f4CrHqlY0A)
 
+___________________________________________________________________________________________________________________________________________
+
+Appointment Capstone (Software Design and Enineering)
 
 ![image](https://github.com/user-attachments/assets/5f814510-e02e-4fba-a621-f6a0242698c3)
 
 [Appointment Capstone](https://github.com/itsmecarisma/ePortfolio/tree/main/Appointment%20Capstone)
 
+The appointment class code is designed to manage and organize scheduling logic efficiently, ensuring continuous handling of various appointment-related functionalities. This class captures essential details such as the date, time, and description of appointments, while providing methods to create, update, and retrieve appointment data. It leverages strong data structures to store and manage appointments, ensuring quick access and manipulation. The class includes validation logic to ensure that all appointments adhere to specified constraints, such as non-overlapping time slots and valid date formats. By integrating these features, the appointment class not only simplifies the scheduling process but also ensures data integrity and consistency, making it a vital component in any application requiring reliable appointment management.
+
+___________________________________________________________________________________________________________________________________________
+
+ Task Capstone (Algorithms and Data Structure)
 
 ![image](https://github.com/user-attachments/assets/f6bf5ff4-20f0-468c-b1e3-f6e0af78c9ca)
 
 [Task Capstone](https://github.com/itsmecarisma/ePortfolio/tree/main/Task%20Capstone)
+
+
 
 
 
