@@ -4,9 +4,9 @@ Table of Content
 
 - Professional Self-Assessment
 - Code Reviews
-- [Appointment Capstone (Software Design and Enineering)](https://github.com/itsmecarisma/ePortfolio/tree/main/Appointment%20Capstone)
+- Appointment Capstone (Software Design and Enineering)
 - Task Capstone (Algorithms and Data Structure)
-- [AnimalShelter Capstone (Databases)](
+- AnimalShelter Capstone (Databases)
 __________________________________________
 
 Professional Self-Assessment
