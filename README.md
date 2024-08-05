@@ -24,9 +24,9 @@ ________________________________________________________________________________
 
 Code Review
 
-Below are two links for my code reviews. One is a link directly to the Githubs Releases, the other to my YouTube page. My code view emphasizes clarity, maintainability, and efficiency. I believe in writing clean, well-documented code that is easy to understand and maintain by others. Additionally, I focus on optimizing performance to ensure that my solutions are both effective and scalable.
+Below are two links for my code reviews. Both are a direct link to my YouTube page. My code view emphasizes clarity, maintainability, and efficiency. I believe in writing clean, well-documented code that is easy to understand and maintain by others. Additionally, I focus on optimizing performance to ensure that my solutions are both effective and scalable.
 
-[Code Review](https://youtu.be/LmlQ2o6t7L8)
+[Appointment and AnimalShelter Code Review](https://youtu.be/LmlQ2o6t7L8)
 
 [Task Code Review](https://youtu.be/8f4CrHqlY0A)
 
