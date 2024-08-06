@@ -1,0 +1,9 @@
+AnimalShelter Enhancements Implemented
+
+1. Proper Exception Handling: Each CRUD method now has a try-except block to catch and log PyMongoError exceptions, which improves the robustness and debuggability of the class.
+
+2. Connection Pooling: The connection to the MongoDB server is initialized with maxPoolSize and connect TimeoutMS parameters, allowing for efficient management of multiple simultaneous connections.
+
+3. Indexing: An index is created on the "name" field of the collection to speed up read operations. Adjust the field names for indexing based on the actual queries being used in your application.
+
+4. Enhanced CRUD Methods: The create, update, and delete methods now include more detailed error handling and validation checks. The update method now uses update one with a $set operator to properly update fields within documents. The read method converts the cursor to a list for easier handling of the results.
