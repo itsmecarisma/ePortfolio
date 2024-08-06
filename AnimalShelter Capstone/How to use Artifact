@@ -1,0 +1,138 @@
+AnimalShelter Class Usage Guide
+
+By following this guide, you should be able to set up, define, and test the `AnimalShelter` class for performing CRUD operations on a MongoDB collection. Ensure to replace placeholder credentials with your actual MongoDB credentials and adjust the host and port as necessary.
+ Prerequisites: Set Up
+
+1. Python: Ensure you have Python installed. 
+2. MongoDB: Ensure you have a MongoDB server running.
+3. Virtual Environment: It is recommended to use a virtual environment to manage dependencies. You can create one using ‘venv’.
+
+Setting Up the Project
+
+1. Create Project Directory Structure
+2. Create and Activate Virtual Environment. Open a terminal or command prompt and navigate to your project directory. Create a virtual environment:
+3. Install Dependencies:  Install the `pymongo` library using pip. Save the dependencies to `requirements.txt`:
+
+Defining the AnimalShelter Class
+
+1. Create `animal_shelter.py`: Create a file named `animal_shelter.py` in the `src` directory and add the following code:
+
+   from pymongo import MongoClient, errors, IndexModel, ASCENDING
+
+   class AnimalShelter:
+       """CRUD operations for Animal collection in MongoDB"""
+
+       def __init__(self, USER, PASS, HOST='nv-desktop-services.apporto.com', PORT=31363):
+           # Connection Variables
+           self.USER = USER
+           self.PASS = PASS
+           self.HOST = HOST
+           self.PORT = PORT
+           self.DB = 'admin'
+           self.COL = 'animals'
+
+           try:
+               # Initialize Connection with connection pooling
+               self.client = MongoClient(
+                   f"mongodb://{self.USER}:{self.PASS}@{self.HOST}:{self.PORT}",
+                   maxPoolSize=50,  # Adjust pool size as needed
+                   connectTimeoutMS=30000
+               )
+               self.database = self.client[self.DB]
+               self.collection = self.database[self.COL]
+
+               # Create index for better read performance
+               self.collection.create_indexes([IndexModel([("name", ASCENDING)])])
+               print("Connection successful and index created!")
+
+           except errors.PyMongoError as e:
+               print(f"An error occurred while connecting to the database: {e}")
+
+       def create(self, data):
+           try:
+               if data:
+                   result = self.collection.insert_one(data)  # data should be a dictionary
+                   return result.acknowledged
+               else:
+                   raise ValueError("Nothing to save, because data parameter is empty")
+           except errors.PyMongoError as e:
+               print(f"An error occurred while inserting data: {e}")
+               return False
+
+       def read(self, query):
+           try:
+               if query:
+                   cursor = self.collection.find(query, {"_id": False})
+               else:
+                   cursor = self.collection.find({}, {"_id": False})
+               return list(cursor)
+           except errors.PyMongoError as e:
+               print(f"An error occurred while reading data: {e}")
+               return []
+
+       def update(self, query, updateData):
+           try:
+               if query and updateData:
+                   result = self.collection.update_one(query, {'$set': updateData})
+                   return result.modified_count
+               else:
+                   raise ValueError("Both query and updateData must be provided")
+           except errors.PyMongoError as e:
+               print(f"An error occurred while updating data: {e}")
+               return 0
+
+       def delete(self, query):
+           try:
+               if query:
+                   result = self.collection.delete_one(query)
+                   return result.deleted_count
+               else:
+                   raise ValueError("Query parameter must be provided for deletion")
+           except errors.PyMongoError as e:
+               print(f"An error occurred while deleting data: {e}")
+               return 0
+ 
+ Testing the AnimalShelter Class
+
+1. Create `test_animal_shelter.py`:  Create a file named `test_animal_shelter.py` in the `tests` directory and add the following code:
+
+   import unittest
+   from src.animal_shelter import AnimalShelter
+
+   class TestAnimalShelter(unittest.TestCase):
+
+       @classmethod
+       def setUpClass(cls):
+           # Replace these with your actual MongoDB credentials
+           USER = "your_username"
+           PASS = "your_password"
+           HOST = "your_host"       # Update with your host
+           PORT = 31363             # Update with your port if different
+           
+           cls.shelter = AnimalShelter(USER, PASS, HOST, PORT)
+
+       def test_create(self):
+           new_animal = {
+               "name": "Fido",
+               "species": "Dog",
+               "age": 5
+           }
+           result = self.shelter.create(new_animal)
+           self.assertTrue(result, "Failed to create new animal")
+
+       def test_read(self):
+           result = self.shelter.read({"name": "Fido"})
+           self.assertIsInstance(result, list, "Read result should be a list")
+           self.assertGreater(len(result), 0, "Read result should not be empty")
+
+       def test_update(self):
+           result = self.shelter.update({"name": "Fido"}, {"age": 6})
+           self.assertEqual(result, 1, "Failed to update animal")
+       def test_delete(self):
+           result = self.shelter.delete({"name": "Fido"})
+           self.assertEqual(result, 1, "Failed to delete animal")
+
+   if __name__ == '__main__':
+       unittest.main() 
+
+2. Run the Unit Tests: Open a terminal or command prompt, navigate to your project directory, and run the tests: You should see output stating Successful!
