@@ -1,0 +1,127 @@
+How to compile code:
+To compile and run your code that connects to MongoDB and performs CRUD operations, you need to properly structure the class and ensure all methods are correctly defined within the class. Here’s how you can organize and run the code:
+
+Step-by-Step Guide
+
+1. Create the `AnimalShelter` Class: Define the `AnimalShelter` class with proper methods for CRUD operations.
+2. Write a Script to Test the Class: Write a script to instantiate the class and call its methods to verify functionality.
+
+AnimalShelter Class Definition
+1. Create a file named `animal_shelter.py` in your `src` directory and define the `AnimalShelter` class:
+from pymongo import MongoClient, errors, IndexModel, ASCENDING
+
+class AnimalShelter:
+    """CRUD operations for Animal collection in MongoDB"""
+
+    def __init__(self, USER, PASS, HOST='nv-desktop-services.apporto.com', PORT=31363):
+        # Connection Variables
+        self.USER = USER
+        self.PASS = PASS
+        self.HOST = HOST
+        self.PORT = PORT
+        self.DB = 'admin'
+        self.COL = 'animals'
+
+        try:
+            # Initialize Connection with connection pooling
+            self.client = MongoClient(
+                f"mongodb://{self.USER}:{self.PASS}@{self.HOST}:{self.PORT}",
+                maxPoolSize=50,  # Adjust pool size as needed
+                connectTimeoutMS=30000
+            )
+            self.database = self.client[self.DB]
+            self.collection = self.database[self.COL]
+
+            # Create index for better read performance
+            self.collection.create_indexes([IndexModel([("name", ASCENDING)])])
+            print("Connection successful and index created!")
+
+        except errors.PyMongoError as e:
+            print(f"An error occurred while connecting to the database: {e}")
+
+    def create(self, data):
+        try:
+            if data:
+                result = self.collection.insert_one(data)  # data should be a dictionary
+                return result.acknowledged
+            else:
+                raise ValueError("Nothing to save, because data parameter is empty")
+        except errors.PyMongoError as e:
+            print(f"An error occurred while inserting data: {e}")
+            return False
+
+    def read(self, query):
+        try:
+            if query:
+                cursor = self.collection.find(query, {"_id": False})
+            else:
+                cursor = self.collection.find({}, {"_id": False})
+            return list(cursor)
+        except errors.PyMongoError as e:
+            print(f"An error occurred while reading data: {e}")
+            return []
+
+    def update(self, query, updateData):
+        try:
+            if query and updateData:
+                result = self.collection.update_one(query, {'$set': updateData})
+                return result.modified_count
+            else:
+                raise ValueError("Both query and updateData must be provided")
+        except errors.PyMongoError as e:
+            print(f"An error occurred while updating data: {e}")
+            return 0
+
+    def delete(self, query):
+        try:
+            if query:
+                result = self.collection.delete_one(query)
+                return result.deleted_count
+            else:
+                raise ValueError("Query parameter must be provided for deletion")
+        except errors.PyMongoError as e:
+            print(f"An error occurred while deleting data: {e}")
+            return 0
+
+
+Script to Test the Class
+1. Create a script named `test_animal_shelter.py` in the `tests` directory to test the `AnimalShelter` class:
+
+from src.animal_shelter import AnimalShelter
+
+# Replace these with your actual MongoDB credentials
+USER = "your_username"
+PASS = "your_password"
+HOST = "your_host"       # Update with your host
+PORT = 31363             # Update with your port if different
+
+# Create an instance of AnimalShelter
+shelter = AnimalShelter(USER, PASS, HOST, PORT)
+
+# Test create method
+new_animal = {
+    "name": "Fido",
+    "species": "Dog",
+    "age": 5
+}
+create_result = shelter.create(new_animal)
+print(f"Create result: {create_result}")
+
+# Test read method
+read_result = shelter.read({"name": "Fido"})
+print(f"Read result: {read_result}")
+
+# Test update method
+update_result = shelter.update({"name": "Fido"}, {"age": 6})
+print(f"Update result: {update_result}")
+
+# Test delete method
+delete_result = shelter.delete({"name": "Fido"})
+print(f"Delete result: {delete_result}")
+
+Running the Script
+
+1. Activate the Virtual Environment: Ensure your virtual environment is activated. If you are using ‘venv’, activate it using:
+2. Run the Test Script: Execute the test script from your terminal or command prompt:
+
+This will run the script and print the results of the CRUD operations to the terminal. 
