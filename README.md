@@ -36,7 +36,7 @@ Appointment Capstone (Software Design and Enineering)
 
 ![image](https://github.com/user-attachments/assets/5f814510-e02e-4fba-a621-f6a0242698c3)
 
-[Appointment Capstone](https://github.com/itsmecarisma/ePortfolio/tree/main/Appointment%20Capstone)
+[Appointment Capstone](https://github.com/itsmecarisma/ePortfolio/blob/main/Appointment%20Capstone/Appointment%20Capstone/src/appointmentservice/Appointment.java)
 
 The Appointment class is designed to manage appointment details, including a unique identifier, appointment date, and description. The class includes fields for `appointmentid`, `appointmentdate`, and `description`, with constraints on their values to ensure validity. The ID is generated using UUID and limited to 10 characters, while the description is capped at 50 characters and cannot be null. The `appointmentdate` must be a future date, verified using the `isFutureDate` method which parses the date string and compares it with the current date. The constructor initializes the appointment with a given date and description, enforcing the constraints through setter methods. The `toString` method provides a readable representation of the appointment details. The main method includes functionality to generate and print 100 valid appointments and test various edge cases, such as null descriptions, overly long descriptions, past dates, and invalid date formats, demonstrating the class's robustness in handling input validation and error reporting.
 
