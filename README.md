@@ -22,7 +22,7 @@ My proficiency in data structures and algorithms has been a cornerstone of my ed
 The artifacts included in my ePortfolio reflect the scope and depth of my computer science knowledge and capabilities. Each project has been carefully selected to demonstrate my technical expertise and my ability to integrate different technologies flawlessly. For instance, the appointment class showcases my ability to manage scheduling logic and data structures effectively. The task class highlights my skills in object-oriented programming and software design, demonstrating my capacity to develop modular and maintainable code. My work on the AnimalShelter project underscores my proficiency in database management and CRUD operations using MongoDB. Additionally, the scheduling system I developed for the recreational center demonstrates my ability to contribute to real-world projects outside the academic environment. By summarizing these artifacts, my portfolio provides a holistic view of my abilities and prepares me for the challenges of the professional world. It serves as a testament to my dedication to the field and my readiness to contribute meaningfully to any organization.
 ____________________________________________________________________________________________________________________________________________
 
-Code Review
+[Code Review](https://github.com/itsmecarisma/ePortfolio/tree/main)
 
 Below are two links for my code reviews. Both are a direct link to my YouTube page. My code view emphasizes clarity, maintainability, and efficiency. I believe in writing clean, well-documented code that is easy to understand and maintain by others. Additionally, I focus on optimizing performance to ensure that my solutions are both effective and scalable.
 
