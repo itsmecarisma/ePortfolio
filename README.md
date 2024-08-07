@@ -56,7 +56,7 @@ AnimalShelter Capstone (Databases)
 
 ![image](https://github.com/user-attachments/assets/0e49477b-c77d-492a-93f1-6fdeb5464495)
 
-[AnimalShelter Capstone]((https://github.com/itsmecarisma/ePortfolio/blob/main/AnimalShelter%20Capstone/src/AnimalShelter.py))
+[AnimalShelter Capstone](https://github.com/itsmecarisma/ePortfolio/blob/main/AnimalShelter%20Capstone/src/AnimalShelter.py)
 
 AnimalShelter Python code defines a class `AnimalShelter` that facilitates CRUD (Create, Read, Update, Delete) operations on a MongoDB collection named `animals`. The class uses the `pymongo` library to establish a connection to a MongoDB database using connection pooling, and it handles potential connection errors. In the constructor, it attempts to connect to the MongoDB server and creates an index on the `name` field for better read performance. The class provides methods to create a document in the collection (`create`), read documents based on a query (`read`), update a document (`update`), and delete a document (`delete`). Additionally, the class includes a method (`generate_test_data`) to generate and insert a specified number of test records into the collection, with random values for `name`, `species`, and `age`. The code ensures error handling for database operations and validates input data for each CRUD method.
 
